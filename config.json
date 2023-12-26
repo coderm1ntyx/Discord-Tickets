@@ -1,0 +1,11 @@
+{
+  "token": "",
+  "MONGODB_SRV": "",
+  "clientId": "",
+  "guildId": "",
+  "ownerUserId": "",
+  "userTicketId": ["", ""],
+  "adminRoleId": "",
+  "ticketLogChannelId": "",
+  "ticketCategoryId": ""
+}
