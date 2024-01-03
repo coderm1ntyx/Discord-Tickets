@@ -10,6 +10,7 @@ const {
   Collection,
   ChannelType,
   disableValidators,
+  OverwriteType
 } = require("discord.js");
 
 const {
@@ -80,26 +81,31 @@ module.exports = {
         var Perm = require("discord.js").PermissionsBitField.Flags;
         var ChannelType = require("discord.js").ChannelType;
 
-        if (userProfile.ticketopen === true) { // Если у участника есть открытый тикет
-          return interaction.reply({ // Отправить эмбед с ошибкой
+        const userTicketOpen = userProfile.ticketopen;
+        
+        if (userTicketOpen === true) {
+          return interaction.reply({
             embeds: [errorEmbed1],
             ephemeral: true,
           });
-        };
+        }
 
         const permissions = [ // Права на канал с тикетом
           {
             id: interaction.guild.id, // Роль @everyone 
             deny: [Perm.ViewChannel, Perm.SendMessages], // Какие права запретить
+            type: OverwriteType.Role,
           },
           {
             id: interaction.user.id, // Участник который открыл тикет
             allow: [Perm.ViewChannel], // Какие права разрешить
             deny: [Perm.SendMessages], // Какие права запретить
+            type: OverwriteType.Member
           },
           {
             id: adminRoleId, // Роль админа
             allow: [Perm.ViewChannel, Perm.SendMessages], // Какие права разрешить
+            type: OverwriteType.Role
           },
         ];
 
