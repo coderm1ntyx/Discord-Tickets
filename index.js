@@ -35,9 +35,6 @@ const client = new Client({
   ],
 });
 
-const DB = require("db.simple");
-const db = new DB.Database();
-
 client.commands = new Collection();
 
 const rest = new REST({ version: "10" }).setToken(token);
