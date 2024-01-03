@@ -1,5 +1,5 @@
 # Бот по тикетам Discord 
-Данный дискорд бот написан на [Node js](https://nodejs.org) с использованием библиотеки [discord.js v14.11.0](https://discord.js.org/#/docs/discord.js/14.11.0/general/welcome) с очень гибкой конфигурацией
+Данный дискорд бот написан на [Node js 17.9.0](https://nodejs.org/en/blog/release/v17.9.0) с использованием библиотеки [discord.js v14.11.0](https://discord.js.org/#/docs/discord.js/14.11.0/general/welcome) с очень гибкой конфигурацией
 > Этот бот идеально подходит для дизайн студий! Неужели это не круто?
 ![visual](./assets/example.png)
 
